@@ -1,0 +1,16 @@
+// Cloudflare Workers config. See README.md → "Deploying" for how to fill in <KV_NAMESPACE_ID>.
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "secret-santa",
+  "main": "./.output/server/index.mjs",
+  "compatibility_date": "2026-11-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "directory": "./.output/public",
+    "binding": "ASSETS"
+  },
+  "observability": { "enabled": true },
+  "kv_namespaces": [
+    { "binding": "SANTA", "id": "f1cb0cb4ef68403dbe0e6bf482fbbdd0" }
+  ]
+}

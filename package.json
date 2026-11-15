@@ -1,0 +1,39 @@
+{
+  "name": "secret-santa",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "test": "vitest run",
+    "typecheck": "nuxt typecheck",
+    "lint": "eslint .",
+    "deploy": "wrangler deploy"
+  },
+  "dependencies": {
+    "@nuxt/ui": "^4.12.0",
+    "nuxt": "^4.6.4",
+    "tailwindcss": "^4.3.5",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@nuxt/eslint": "^1.17.0",
+    "@nuxt/test-utils": "^4.4.0",
+    "eslint": "^10.15.0",
+    "typescript": "^6.0.3",
+    "vitest": "^5.1.0",
+    "vue-tsc": "^3.3.14",
+    "wrangler": "^4.162.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "workerd",
+      "vue-demi",
+      "@parcel/watcher",
+      "sharp"
+    ]
+  }
+}
